@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   dokuwiki:
-    image: dokuwiki
+    image: ericbarch/dockuwiki
     environment:
       - SSH_DOMAIN=${SSH_DOMAIN}
       - SSH_PORT=${SSH_PORT}
