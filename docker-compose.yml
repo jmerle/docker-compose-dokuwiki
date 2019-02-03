@@ -1,0 +1,19 @@
+version: '3.5'
+services:
+  dokuwiki:
+    image: dokuwiki
+    environment:
+      - SSH_DOMAIN=${SSH_DOMAIN}
+      - SSH_PORT=${SSH_PORT}
+      - REMOTE_URL=${REMOTE_URL}
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.port: 3000
+      traefik.frontend.rule: "Host:${DOMAIN}"
+    restart: unless-stopped
+networks:
+  traefik:
+    name: ${TRAEFIK_NETWORK}
+    external: true
