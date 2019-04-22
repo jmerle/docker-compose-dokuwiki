@@ -1,4 +1,4 @@
-# Docker Compose DokuWiki
+# Traefik DokuWiki
 
 A Docker Compose configuration to run [DokuWiki](https://www.dokuwiki.org/dokuwiki) behind a [Traefik](https://traefik.io/) reverse proxy using [DockuWiki](https://github.com/ericbarch/dockuwiki) to support automatic backups with Git.
 
